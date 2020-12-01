@@ -1,0 +1,35 @@
+/* .webDev,
+.webDev2 {
+  animation-name: revealName;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+@keyframes revealName {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: .2;
+  }
+
+  40% {
+    opacity: .4s;
+  }
+
+  60% {
+    opacity: .6s;
+  }
+
+  80% {
+    opacity: .8s;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
