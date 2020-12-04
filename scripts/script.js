@@ -7,7 +7,7 @@ if (!sessionStorage.isVisited) {
 
 
   function logo() {
-    $(".loadWheel").addClass("fadeIn");
+    // $(".loadWheel").addClass("fadeIn");
   }
 
   function introDiv() {
@@ -43,6 +43,7 @@ $('.navBar a, .nameP a, .contactP a').on('click', function(e) {
 });
 
 // NAV BAR
+if ($(window).width() > 768) {
 $(".topNav li a").click(function() {
   $(".topNav li a").removeClass("navClicked");
   $(this).addClass("navClicked");
@@ -64,6 +65,7 @@ $(".navWho, .navWhere, .navHow").click(function() {
     $("nav ul").fadeIn(1600, function() {});
   });
 });
+}
 
 // RESET NAV BAR WHEN CLICKING HOME
 $(".nameP a").click(function() {
@@ -111,12 +113,6 @@ $("#chk").click(function() {
     $(".centerImage").removeClass("altCenterImage");
   }
 })
-
-// MOBILE DROP DOWN MENU
-$("#dropDown").click(function() {
-  $(".navLink").slideToggle();
-});
-
 
 // SCROLL ACTIVE NAVBAR
 // $(document).ready(function(){
