@@ -1,3 +1,122 @@
 @media all and (max-width: 320px) {
-  
+  body {
+    overflow: auto;
+  }
+
+  section {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 568px;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .intro {
+    display: none;
+  }
+
+  .darkModeContainer {
+    display: none;
+  }
+
+  .topNameBox {
+    padding: 20px 20px;
+    z-index: 10;
+  }
+
+  .nameP {
+    z-index: 10;
+  }
+
+  #pointer-ring,
+  #pointer-dot {
+    display: none;
+  }
+
+  .centerImage {
+    max-width: 90%;
+  }
+
+  .whoImage,
+  .whatImage,
+  .whereImage,
+  .whyImage,
+  .howImage {
+  display: none;
+}
+
+/* ==== NAV BAR ==== */
+
+  .navBarContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .topNav {
+    list-style: none;
+    line-height: 4rem;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  .topNav.responsive {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    top: 10%;
+    left: 0;
+  }
+
+  .topNav.responsive li {
+
+  }
+
+
+  .navClose {
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #2a2a2a;
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+    transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+  }
+
+  .navOpen {
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #2a2a2a;
+    visibility: visible;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+  }
+
+/* ==== WHO SECTION ==== */
+  .whoTextBox {
+    top: 42rem;
+    right: 0;
+    z-index: 0;
+  }
 }
