@@ -11,14 +11,15 @@
   <link type="text/css" rel="stylesheet" href="styles/responsive.css">
   <link type="text/css" rel="stylesheet" href="styles/animation.css">
   <link type="text/css" rel="stylesheet" href="styles/hamburger.css">
+  <link type="text/css" rel="stylesheet" href="styles/modal.css">
   <script src="https://unpkg.com/scrollreveal"></script>
   <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <section id="landing">
-    <div class="wrapper">
+  <div class="wrapper">
+    <section id="landing">
       <div class="intro" id="introDiv">
 
         <div class="loadingBro">
@@ -62,164 +63,189 @@
           </nav>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="who">
-    <div class="container-fluid">
-      <div class="imageBox">
-        <div class="imageContainer">
-          <img class="whoImage" src="assets\images\69236926_2825345660828786_7805771866961870848_n.jpg">
+    <section id="who" class="scrollSpy">
+      <div class="container-fluid">
+        <div class="imageBox">
+          <div class="imageContainer">
+            <img class="whoImage" src="assets\images\69236926_2825345660828786_7805771866961870848_n.jpg">
+          </div>
+        </div>
+        <div class="whoTextBox">
+          <div class="titleContainer">
+            <h1 class="blurbName">Brayden</h1>
+            <h2 class="breakdownName">bɹeɪ.dən</h2>
+          </div>
+          <div class="textContainer">
+            <p class="blurbText">I'm Brayden Barter, a<span class="altTextColor"> Front-end Developer</span> that (obviously) loves to code. I have a strong focus on <span class="altTextColor">UI</span>
+              <br>and I'm studying for a better understanding of
+              <span class="altTextColor">UX.</span></p>
+            <p class="skillList"><span class="altSkills">Skills </span>- UI Design, Responsive Design, HTML5, CSS, JavaScript, jQuery, Adobe Photoshop, Adobe Premiere</p>
+          </div>
         </div>
       </div>
-      <div class="whoTextBox">
+    </section>
+
+    <section id="what">
+      <div class="container-fluid">
+        <div class="imageBox">
+          <div class="imageContainer">
+            <div class='container whatImage'>
+              <div class='row'>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>
+                  <img class="projectImg modal-hover-opacity" data-toggle="modal" data-target=".modal" src="assets\projects\alium\alium3.jpg">
+                </div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>2</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>3</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>4</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>5</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>6</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>7</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>8</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>9</div>
+              </div>
+            </div>
+            <!-- <img class="whatImage" src="assets\images\pexels-tranmautritam-251225.jpg">
+            <img class="modalImg" id="aliumModalImg" src="assets\projects\alium\alium3.jpg">
+            <img class="modalImg" id="flipModalImg" src="assets\projects\flipper\flipper.jpg"> -->
+            <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img class="innerImg whatImg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="whatTextBox">
         <div class="titleContainer">
-          <h1 class="blurbName">Brayden</h1>
-          <h2 class="breakdownName">bɹeɪ.dən</h2>
+          <h1 class="whatTitle">What?</h1>
         </div>
         <div class="textContainer">
-          <p class="blurbText">I'm Brayden Barter, a<span class="altTextColor"> Front-end Developer</span> that (obviously) loves to code. I have a strong focus on <span class="altTextColor">UI</span>
-            <br>and I'm studying for a better understanding of
-            <span class="altTextColor">UX.</span></p>
-          <p class="skillList"><span class="altSkills">Skills </span>- UI Design, Responsive Design, HTML5, CSS, JavaScript, jQuery, Adobe Photoshop, Adobe Premiere</p>
+          <p class="whatText">As a Front-end Developer I build all my websites from scratch, with the aid of libraries such as:<br><a href="https://getbootstrap.com/" target="_blank" class="bootstrapAlt"> Bootstrap
+              4</a>, <a href="https://sass-lang.com/" target="_blank" class="sassAlt">SASS</a> and <a href="https://jquery.com/" target="_blank" class="jQueryAlt">jQuery</a>. <br>This enables me to create custom websites that suit the customer,
+            rather than editing pre-existing templates.<br><br>Although my knowledge and experience for the <span class="altTextColor">back-end is limited</span>, I am still studying and learning more about that on the side.</p>
+          <h4 class="altTextColor projectTitle">Projects</h4>
+          <ul class="projectList">
+            <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="aliumProjectModal" href="http://aliumdining.epizy.com/" target="_blank">Alium Dining</a>
+              <p class="projectBlurb">This website re-design was simply done as a self project and wasn't a commissioned piece of work. I kept with the current branding of the restaurant, including the same font family and similar brush strokes to
+                keep
+                with their current
+                website.</p>
+            </li>
+            <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="https://premiare.github.io/colorflipper/" target="_blank">Color/Colour Flipper</a>
+              <p class="projectBlurb">This was one of my first projects, without much forethought I started the project and probably took the longest / least efficient way to complete it, but in the end I did learn a lot and that's the main goal.
+                Built
+                with classic JavaScript.</p>
+            </li>
+            <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a>
+              <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="what">
-    <div class="container-fluid">
-      <div class="imageBox">
-        <div class="imageContainer">
-          <img class="whatImage" src="assets\images\pexels-tranmautritam-251225.jpg">
-          <img class="modalImg" id="aliumModalImg" src="assets\projects\alium\alium3.jpg">
-          <img class="modalImg" id="flipModalImg" src="assets\projects\flipper\flipper.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="whatTextBox">
-      <div class="titleContainer">
-        <h1 class="whatTitle">What?</h1>
-      </div>
-      <div class="textContainer">
-        <p class="whatText">As a Front-end Developer I build all my websites from scratch, with the aid of libraries such as:<br><a href="https://getbootstrap.com/" target="_blank" class="bootstrapAlt"> Bootstrap
-            4</a>, <a href="https://sass-lang.com/" target="_blank" class="sassAlt">SASS</a> and <a href="https://jquery.com/" target="_blank" class="jQueryAlt">jQuery</a>. This enables me to create custom websites that suit the customer,
-          <br>rather
-          than editing pre-existing templates.<br><br>Although my knowledge and experience for the <span class="altTextColor">back-end is limited</span>, I am still studying and learning more about that on the side.</p>
-        <h4 class="altTextColor projectTitle">Projects</h4>
+      <div class="projectListBoxRight">
         <ul class="projectList">
-          <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="aliumProjectModal" href="http://aliumdining.epizy.com/" target="_blank">Alium Dining</a>
-            <p class="projectBlurb">This website re-design was simply done as a self project and wasn't a commissioned piece of work. I kept with the current branding of the restaurant, including the same font family and similar brush strokes to
-              keep
-              with their current
-              website.</p>
+          <li><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a> <span class="hoverArrow">&#8592;</span> <span class="hoverMe">Hover Me</span>
+            <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
           </li>
-          <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="https://premiare.github.io/colorflipper/" target="_blank">Color/Colour Flipper</a>
-            <p class="projectBlurb">This was one of my first projects, without much forethought I started the project and probably took the longest / least efficient way to complete it, but in the end I did learn a lot and that's the main goal.
-              Built
-              with classic JavaScript.</p>
+          <li><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a> <span class="hoverArrow">&#8592;</span> <span class="hoverMe">Hover Me</span>
+            <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
           </li>
-          <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a>
+          <li><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a> <span class="hoverArrow">&#8592;</span> <span class="hoverMe">Hover Me</span>
             <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
           </li>
         </ul>
       </div>
-    </div>
-    <div class="projectListBoxRight">
-      <ul class="projectList">
-        <li><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a> <span class="hoverArrow">&#8592;</span> <span class="hoverMe">Hover Me</span>
-          <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
-        </li>
-        <li><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a> <span class="hoverArrow">&#8592;</span> <span class="hoverMe">Hover Me</span>
-          <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
-        </li>
-        <li><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a> <span class="hoverArrow">&#8592;</span> <span class="hoverMe">Hover Me</span>
-          <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <section id="where">
-    <div class="container-fluid">
-      <div class="imageBox">
-        <div class="imageContainer">
-          <img class="whereImage" src="assets\images\alexis-01fDADro0PU-unsplash.jpg">
+    <section id="where">
+      <div class="container-fluid">
+        <div class="imageBox">
+          <div class="imageContainer">
+            <img class="whereImage" src="assets\images\alexis-01fDADro0PU-unsplash.jpg">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="whereTextBox">
-      <div class="titleContainer">
-        <h1 class="whereTitle">Where?</h1>
-      </div>
-      <div class="textContainer">
-        <p class="whereText">I live and work in <span class="altTextColor">Melbourne, Australia</span>. Although my location is fixed, my ability to work with businesses and clients from other locations is not an issue. <br><br> I'm currently
-          looking
-          for a position as a <span class="altTextColor">Front-end Developer</span> professionally, so if you're here to check out some of my work, welcome.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="why">
-    <div class="container-fluid">
-      <div class="imageBox">
-        <div class="imageContainer">
-          <img class="whyImage" src="assets\images\halacious-tZc3vjPCk-Q-unsplash.jpg">
+      <div class="whereTextBox">
+        <div class="titleContainer">
+          <h1 class="whereTitle">Where?</h1>
+        </div>
+        <div class="textContainer">
+          <p class="whereText">I live and work in <span class="altTextColor">Melbourne, Australia</span>. Although my location is fixed, my ability to work with businesses and clients from other locations is not an issue. <br><br> I'm currently
+            looking
+            for a position as a <span class="altTextColor">Front-end Developer</span> professionally, so if you're here to check out some of my work, welcome.</p>
         </div>
       </div>
-    </div>
-    <div class="whyTextBox">
-      <div class="titleContainer">
-        <h1 class="whyTitle">Why?</h1>
-      </div>
-      <div class="textContainer">
-        <p class="whyText">Great question. Why did I decide to <span class="altTextColor">drop my career</span> and move to programmning? Although COVID-19 and 2020 sort of forced my hand on the dropping career part, it was a blessing in disguise.
-          <br><br>Late 2019 I had taken up a small interest in programming but didn't have much time to dedicate to it. Along comes 2020 and I had many locked down months to focus purely on coding, <br>specifically Web Development. <br><br> I
-          completed a <a class="altTextColor" href="https://www.linkedin.com/learning/javascript-essential-training-3/welcome" target="_blank">JavaScript course</a> through LinkedInLearning and moved on to a <br><a class="altTextColor"
-            href="https://www.udemy.com/course/ultimate-web/" target="_blank">Full Stack Web Dev Course</a> through Udemy and Devslopes. After these courses I developed basic websites, which won't see the light of day,<br> and continued to design
-          and
-          build websites.<br><br> My aim is continue learning about Front-end while also <span class="altTextColor">learning and practising</span> about back-end, as I have a basic understanding, but definitely not enough to call myself a
-          full-stack
-          developer. The main thing for me to remember is that <span class="altTextColor">the end goal is endless</span>, there's always room to learn and improve and that's another thing that attracts me to coding.<br><br><span class="quote">"Think
-            outside the div."</span> - Kristof Orts</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="how">
-    <div class="container-fluid">
-      <div class="imageBox">
-        <div class="imageContainer">
-          <img class="howImage" src="assets\images\davide-baraldi-vHaJiuCeZtc-unsplash.jpg">
+    <section id="why">
+      <div class="container-fluid">
+        <div class="imageBox">
+          <div class="imageContainer">
+            <img class="whyImage" src="assets\images\farzad-nazifi-p-xSl33Wxyc-unsplash.jpg">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="howTextBox">
-      <div class="titleContainer">
-        <h1 class="howTitle">How?</h1>
+      <div class="whyTextBox">
+        <div class="titleContainer">
+          <h1 class="whyTitle">Why?</h1>
+        </div>
+        <div class="textContainer">
+          <p class="whyText">Great question. Like most in my generation, I grew up in the booming age of the internet, computers and <br>social media. I never really considered what it took to build a website until I started googling around. After a
+            few videos and articles, I was hooked.
+            <br><br>I enrolled in a handful of Black Friday Sale courses in late 2019, and with 2020 being the year that it was, it was a great time to study and learn some new skills.<br><br> I
+            completed a <a class="altTextColor" href="https://www.linkedin.com/learning/javascript-essential-training-3/welcome" target="_blank">JavaScript course</a> through LinkedInLearning and moved on to a <br><a class="altTextColor"
+              href="https://www.udemy.com/course/ultimate-web/" target="_blank">Full Stack Web Dev Course</a> through Udemy and Devslopes.<br><br> My aim is continue learning Front-end, through new and updated technologies while also <span
+              class="altTextColor">learning</span> about back-end development, UI and UX design.
+            developer. <br><br>Each project I start and complete teaches me somethign new, whether it seemed so simple after the fact, or something that has taken me weeks to understand. <span class="altTextColor">My goal is to learn</span>, there's
+            always room to learn and improve and that's another thing that attracts me to coding.<br><br><span class="quote">"Think
+              outside the div."</span> - Kristof Orts</p>
+        </div>
       </div>
-      <div class="textContainer">
-        <p class="howText">How can you contact me?<br><br>Do I sound like the <span class="altTextColor">right candidate for the job</span>?<br><br>Do you need a <span class="altTextColor">website designed and built</span>?<br><br>Do you want to
-          <span class="altTextColor">share ideas and collaborate</span>?</p>
-        <ul class="contactList">
-          <li><a href="https://www.linkedin.com/in/braydenbarter/" target="_blank"><img class="socialLogo linkedLogo" src="assets\social\linkedin.png"></a></li>
-          <li><a href="https://github.com/premiare" target="_blank"><img class="socialLogo githubLogo" src="assets\social\github (1).png"></a></li>
-          <li><a href="mailto:braydenbarter@gmail.com" target="_blank"><img class="socialLogo gmailLogo" src="assets\social\gmail.png"></a></li>
-        </ul>
+    </section>
+
+    <section id="how">
+      <div class="container-fluid">
+        <div class="imageBox">
+          <div class="imageContainer">
+            <img class="howImage" src="assets\images\davide-baraldi-vHaJiuCeZtc-unsplash.jpg">
+          </div>
+        </div>
       </div>
-      <div class="contactMe">
-        <!-- <form name="contactForm" class="contactForm">
+      <div class="howTextBox">
+        <div class="titleContainer">
+          <h1 class="howTitle">How?</h1>
+        </div>
+        <div class="textContainer">
+          <p class="howText">I'm available for <span class="altTextColor">website development for small businesses</span>, if you need a website and like the look of my work, don't hesitate to contact me.</p>
+          <p class="howText"><br><br>Do I sound like the <span class="altTextColor">right candidate for the job</span>?<br><br>Do you need a <span class="altTextColor">website designed and built</span>?<br><br>Do you want to
+            <span class="altTextColor">share ideas and collaborate</span>?</p>
+          <ul class="contactList">
+            <li><a href="https://www.linkedin.com/in/braydenbarter/" target="_blank"><img class="socialLogo linkedLogo" src="assets\social\linkedin.png"></a></li>
+            <li><a href="https://github.com/premiare" target="_blank"><img class="socialLogo githubLogo" src="assets\social\github (1).png"></a></li>
+            <li><a href="mailto:braydenbarter@gmail.com" target="_blank"><img class="socialLogo gmailLogo" src="assets\social\gmail.png"></a></li>
+          </ul>
+        </div>
+        <div class="contactMe">
+          <!-- <form name="contactForm" class="contactForm">
           <label class="fullNameLabel" for="fullName">Full Name:</label>
           <input type="text" class="fullNameInput" name="fullName" placeholder="Full Name"></input>
           <label for="phoneNum">Contact Number:</label>
           <input type="number" class="contactNum" name="contactNum" placeholder="Contact Number"></input>
         </form> -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="scripts/snapscroll.js"></script>
   <script src="scripts/script.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
   <script src="scripts/MailtoComposeInGMail.user.js"></script>
@@ -230,6 +256,7 @@
   <script src="scripts/hamburger.js"></script>
   <script src="scripts/pointer.js"></script>
   <script src="scripts/reveal.js"></script>
+  <script src="scripts/modal.js"></script>
   <script src="scripts/jquery.reveal.js"></script>
 </body>
 
