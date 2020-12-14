@@ -4,11 +4,26 @@
   }
 
   section {
-    max-width: 100vw;
+    /* max-width: 100vw;
     max-height: 100vh;
-    height: 568px;
     width: 100%;
     min-height: 100vh;
+    height: 568px; */
+    height: 100vh;
+  }
+
+  section#what {
+    height: 200vh;
+  }
+
+  hr.sectionLine {
+    display: none;
+    height: 1px;
+    background-color: rgb(120, 241, 219);
+    /* color: rgb(120, 241, 219); */
+    z-index: 2;
+    margin: 0;
+    position: relative;
   }
 
   .intro {
@@ -42,11 +57,10 @@
   .whereImage,
   .whyImage,
   .howImage {
-  display: none;
-}
+    display: none;
+  }
 
-/* ==== NAV BAR ==== */
-
+  /* ==== NAV BAR ==== */
   .navBarContainer {
     position: fixed;
     top: 0;
@@ -73,15 +87,12 @@
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding: 2rem 0;
     top: 10%;
     left: 0;
   }
 
-  .topNav.responsive li {
-
-  }
-
+  .topNav.responsive li {}
 
   .navClose {
     height: 100%;
@@ -113,10 +124,57 @@
     transition: transform 0.4s ease-in-out;
   }
 
-/* ==== WHO SECTION ==== */
+  /* ==== IMAGE GLOBALS ==== */
+  .imageContainer {
+    padding: 0;
+  }
+
+  .centerImage {
+    padding-top: 107px;
+  }
+
+  /* ==== WHO SECTION ==== */
   .whoTextBox {
-    top: 42rem;
-    right: 0;
+    position: relative;
+    margin: 4rem 0;
     z-index: 0;
   }
+
+  .desktopSkillDiv {
+    display: none;
+  }
+
+  .skillList {
+
+  }
+
+  .mobileSkillDiv {
+    display: block;
+  }
+
+  .mobileAltSkills {
+    font-size: 2rem;
+  }
+
+  /* ==== WHAT SECTION ==== */
+  .whatTextBox {
+    position: relative;
+    margin-top: 4rem;
+    margin-left: 0;
+    text-align: left;
+    z-index: 0;
+  }
+
+  .whatText {
+    text-align: left;
+  }
+
+  .projectList {
+    padding: 0;
+  }
+
+  .projectListBoxRight {
+    display: none;
+  }
+
 }
