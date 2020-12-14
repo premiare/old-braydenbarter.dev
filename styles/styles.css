@@ -47,6 +47,9 @@ section {
   background: rgb(29, 122, 233);
 }
 
+.hamburger-menu {
+  display: none;
+}
 /* ---- IMAGE GLOBALS ---- */
 .whoImage,
 .whatImage,
