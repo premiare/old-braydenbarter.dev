@@ -14,6 +14,7 @@
   <link type="text/css" rel="stylesheet" href="styles/modal.css">
   <script src="https://unpkg.com/scrollreveal"></script>
   <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
@@ -48,6 +49,7 @@
         <div class="imageBox">
           <div class="imageContainer">
             <img class="centerImage" src="assets\logo\BB_WD_Logo_Trans_Large.png">
+            <!-- <h1 class="mainLogo">BRAYDEN<br>BARTER</h1> -->
           </div>
         </div>
 
@@ -65,7 +67,7 @@
       </div>
     </section>
 
-    <section id="who" class="scrollSpy">
+    <section id="who">
       <div class="container-fluid">
         <div class="imageBox">
           <div class="imageContainer">
@@ -81,35 +83,170 @@
             <p class="blurbText">I'm Brayden Barter, a<span class="altTextColor"> Front-end Developer</span> that (obviously) loves to code. I have a strong focus on <span class="altTextColor">UI</span>
               <br>and I'm studying for a better understanding of
               <span class="altTextColor">UX.</span></p>
-            <p class="skillList"><span class="altSkills">Skills </span>- UI Design, Responsive Design, HTML5, CSS, JavaScript, jQuery, Adobe Photoshop, Adobe Premiere</p>
+            <div class="desktopSkillDiv">
+              <p class="skillList"><span class="altSkills">Skills </span>- HTML5, CSS, JavaScript, jQuery, Responsive Design, Adobe Illustrator, Adobe Photoshop, Adobe Premiere</p>
+            </div>
+            <div class="mobileSkillDiv">
+              <p class="skillList mobileSkillList"><span class="altSkills mobileAltSkills">Skills </span>
+              <ul class="mobileSkillUl">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Responsive Design</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Premiere</li>
+              </ul>
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      <hr class="sectionLine">
     </section>
 
     <section id="what">
       <div class="container-fluid">
         <div class="imageBox">
           <div class="imageContainer">
+
+            <div class="projectContainer">
+            <img class="portfolioPreview projectPreview" src="assets\projects\portfolio\portfolio.png">
+            <div class="portfolioProjectInfo">
+              <a class="closeModal">&#215;</a>
+              <h1 class="projectTitle"><span class="portfolioAlt">braydenbarter.dev</span> - Personal Portfolio</h1>
+              <p class="projectBlurb">My personal portfolio was designed with two things in mind, showing off my previous work and showing off what I can do, but haven't put to use on past projects. <br><br>The design was initially inspired by <a class="inspiredLink" href="https://www.mortnsn.com/" target="_blank">Kevin Mortensen's Website - mortnsn.com</a> and from that I continued to develop and design as I saw fit.<br><br> I personally enjoy single page websites which displays all the content needed in one, with smooth scrolling through the page, which is why I chose this design.</p>
+              <div class="projectTech"><h1 class="techTitle">Built with: </h1>
+              <ul class="techList">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript / jQuery</li>
+                <li>Bootstrap 4.5</li>
+                <li>pointer.js</li>
+                <li>scrollrevealjs.org</li>
+              </ul>
+              </div>
+              <a class="projectLink" href="https://premiare.github.io/braydenbarter.dev/" target="_blank">braydenbarter.dev</a>
+            </div>
+          </div>
+          <div class="projectContainer">
+            <img class="paywaivPreview projectPreview" src="assets\projects\paywaiv\screencapture-premiare-github-io-paywaiv-2020-12-11-15_29_23.png">
+            <div class="paywaivProjectInfo">
+              <a class="closeModal">&#215;</a>
+              <h1 class="projectTitle"><span class="paywaivAlt">PayWaiv</span> - Financial Mock Up</h1>
+              <p class="projectBlurb">PayWaiv was a project where I focused on all things design, from the branding, UI and UX design which was heavily inspired by <a class="inspiredLink" href="https://res.cloudinary.com/dz209s6jk/image/upload/v1600345883/Challenges/fqyuye2z7a3bjvyaztoj.jpg" target="_blank">this mock up </a>by Frontend Mentor.<br><br>I did some research and design for the iPhone mock ups used on the website and learnt a little bit about wireframing in the process.</p>
+              <div class="projectTech"><h1 class="techTitle">Built with: </h1>
+              <ul class="techList">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript / jQuery</li>
+                <li>Bootstrap 4.5</li>
+                <li><a class="techListLink" href="http://haruntuncelli.com/portfolio/personal-finance-app-design/">Harun Tuncelli Design</a></li>
+              </ul>
+              </div>
+              <a class="projectLink" href="https://premiare.github.io/paywaiv/" target="_blank">premiare.github.io/paywaiv</a>
+            </div>
+          </div>
+          <div class="projectContainer">
+            <img class="allabovePreview projectPreview" src="assets\projects\allabove\allabove.png">
+            <div class="allaboveProjectInfo">
+              <a class="closeModal">&#215;</a>
+              <h1 class="projectTitle"><span class="allAboveAlt">All Above Reforestation</span></h1>
+              <p class="projectBlurb">This project was started in September 2020, with ongoing updates and deployments to the website. All Above is an Australian Reforestation company based in New South Wales, which aims to develop and deploy efficient ways to plant and regenerate local forests and bushland.<br><br>All Above is my first freelance project, which also includes ongoing updates and development of the website.</p>
+              <div class="projectTech"><h1 class="techTitle">Built with: </h1>
+              <ul class="techList">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript / jQuery</li>
+                <li>Bootstrap 4.5</li>
+              </ul>
+              </div>
+              <a class="projectLink" href="http://allabove.com.au/" target="_blank">allabove.com.au</a>
+            </div>
+          </div>
+          <div class="projectContainer">
+            <img class="wowPreview projectPreview" src="assets\projects\wow\screencapture-premiare-github-io-WoWClassGenerator-2020-12-11-16_08_28.png">
+            <div class="wowProjectInfo">
+              <a class="closeModal">&#215;</a>
+              <h1 class="projectTitle"><span class="wowAlt">World of Warcraft Random Class Generator</span></h1>
+              <p class="projectBlurb">During my short lived time of playing World of Warcraft, I thought of a way I could combine WoW and website development in to one, so I built a random class generator.<br><br>Majority of this project was Javascript based, figuring out how to randomize all the seperate combinations and possibilities of race, class and specialization.<br><br>As updates for classes and content continue for the game, I intend on keeping the website updated too.</p>
+              <div class="projectTech"><h1 class="techTitle">Built with: </h1>
+              <ul class="techList">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript / jQuery</li>
+              </ul>
+              </div>
+              <a class="projectLink" href="https://premiare.github.io/WoWClassGenerator/" target="_blank">premiare.github.io/WoWClassGenerator</a>
+            </div>
+          </div>
+          <div class="projectContainer">
+            <img class="flipperPreview projectPreview" src="assets\projects\flipper\flipper.jpg">
+            <div class="flipperProjectInfo">
+              <h1 class="projectTitle">Random Colour Flipper</h1>
+              <a class="closeModal">&#215;</a>
+              <p class="projectBlurb">This random colour flipper was one of my first projects I completed, with a big focus on the Javascript side of things and less on the design. I learnt a lot in a small amount of time with this project.</p>
+              <div class="projectTech"><h1 class="techTitle">Built with: </h1>
+              <ul class="techList">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap 4.5</li>
+                <li>Colours from <a href="https://cloford.com/resources/colours/500col.htm" target="_blank" class="inspiredLink">cloford.com</a></li>
+                <li>Comma Remover - helped with colour array <a href="https://delim.co/" target="_blank" class="inspiredLink">delim.co</a></li>
+              </ul>
+              </div>
+              <a class="projectLink" href="https://premiare.github.io/colorflipper/" target="_blank">premiare.github.io/colorflipper</a>
+            </div>
+          </div>
+          <div class="projectContainer">
+            <img class="aliumPreview projectPreview" src="assets\projects\alium\alium3.jpg">
+            <div class="aliumProjectInfo">
+              <h1 class="projectTitle"><span class="aliumAlt">Alium Dining</h1>
+                <a class="closeModal">&#215;</a>
+              <p class="projectBlurb">Alium Dining was a project I began with the permission of my friend, the owner of the restaurant, to design and somewhat rebrand the <a href="https://aliumdining.com.au/" class="inspiredLink">website from it's original state</a>. I kept some original design elements, specifically the paint brush strokes, the "Alium" font and the menu items.<br><br></p>
+              <div class="projectTech"><h1 class="techTitle">Built with: </h1>
+              <ul class="techList">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap 4.5</li>
+              </ul>
+              </div>
+              <a class="projectLink" href="http://aliumdining.epizy.com/?i=1">Alium Dining</a>
+            </div>
+          </div>
+
             <div class='container whatImage'>
               <div class='row'>
                 <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>
-                  <img class="projectImg modal-hover-opacity" data-toggle="modal" data-target=".modal" src="assets\projects\alium\alium3.jpg">
+                  <img class="projectImg portfolioImg" src="assets\projects\portfolio\portfolio.png">
                 </div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>2</div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>3</div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>4</div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>5</div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>6</div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>7</div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>8</div>
-                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>9</div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>
+                  <img class="projectImg paywaivImg" src="assets\projects\paywaiv\paywaiv_square.png">
+                </div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>
+                  <img class="projectImg allaboveImg" src="assets\projects\allabove\allabove.png">
+                </div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>
+                  <img class="projectImg wowImg" src="assets\projects\wow\screencapture-premiare-github-io-WoWClassGenerator-2020-12-11-15_29_19.png">
+                </div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>
+                  <img class="projectImg flipperImg" src="assets\projects\flipper\flipper.jpg">
+                </div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'>
+                  <img class="projectImg aliumImg" src="assets\projects\alium\alium3.jpg">
+                </div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'><p class="projectComing">Coming Soon...</p></div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'><p class="projectComing">Coming Soon...</p></div>
+                <div class='col-xs-12 col-md-4 col-sm-4 col-lg-4 projectBox'><p class="projectComing">Coming Soon...</p></div>
               </div>
             </div>
             <!-- <img class="whatImage" src="assets\images\pexels-tranmautritam-251225.jpg">
             <img class="modalImg" id="aliumModalImg" src="assets\projects\alium\alium3.jpg">
             <img class="modalImg" id="flipModalImg" src="assets\projects\flipper\flipper.jpg"> -->
-            <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
@@ -117,38 +254,38 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="whatTextBox">
+          <div class="titleContainer">
+            <h1 class="whatTitle">What?</h1>
+          </div>
+          <div class="textContainer">
+            <p class="whatText">As a Front-end Developer I build all my websites from scratch, with the aid of libraries such as:<br><a href="https://getbootstrap.com/" target="_blank" class="bootstrapAlt"> Bootstrap
+                4</a>, <a href="https://sass-lang.com/" target="_blank" class="sassAlt">SASS</a> and <a href="https://jquery.com/" target="_blank" class="jQueryAlt">jQuery</a>. <br>This enables me to create custom websites that suit the customer,
+              rather than editing pre-existing templates.<br><br>Although my knowledge and experience for the <span class="altTextColor">back-end is limited</span>, I am still studying and learning more about that on the side.</p>
+            <!-- <h4 class="altTextColor projectTitle">Projects</h4> -->
+            <!-- <ul class="projectList">
+              <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="aliumProjectModal" href="http://aliumdining.epizy.com/" target="_blank">Alium Dining</a>
+                <p class="projectBlurb">This website re-design was simply done as a self project and wasn't a commissioned piece of work. I kept with the current branding of the restaurant, including the same font family and similar brush strokes to
+                  keep
+                  with their current
+                  website.</p>
+              </li>
+              <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="https://premiare.github.io/colorflipper/" target="_blank">Color/Colour Flipper</a>
+                <p class="projectBlurb">This was one of my first projects, without much forethought I started the project and probably took the longest / least efficient way to complete it, but in the end I did learn a lot and that's the main goal.
+                  Built
+                  with classic JavaScript.</p>
+              </li>
+              <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a>
+                <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
+              </li>
+            </ul> -->
           </div>
         </div>
       </div>
-      <div class="whatTextBox">
-        <div class="titleContainer">
-          <h1 class="whatTitle">What?</h1>
-        </div>
-        <div class="textContainer">
-          <p class="whatText">As a Front-end Developer I build all my websites from scratch, with the aid of libraries such as:<br><a href="https://getbootstrap.com/" target="_blank" class="bootstrapAlt"> Bootstrap
-              4</a>, <a href="https://sass-lang.com/" target="_blank" class="sassAlt">SASS</a> and <a href="https://jquery.com/" target="_blank" class="jQueryAlt">jQuery</a>. <br>This enables me to create custom websites that suit the customer,
-            rather than editing pre-existing templates.<br><br>Although my knowledge and experience for the <span class="altTextColor">back-end is limited</span>, I am still studying and learning more about that on the side.</p>
-          <h4 class="altTextColor projectTitle">Projects</h4>
-          <ul class="projectList">
-            <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="aliumProjectModal" href="http://aliumdining.epizy.com/" target="_blank">Alium Dining</a>
-              <p class="projectBlurb">This website re-design was simply done as a self project and wasn't a commissioned piece of work. I kept with the current branding of the restaurant, including the same font family and similar brush strokes to
-                keep
-                with their current
-                website.</p>
-            </li>
-            <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="https://premiare.github.io/colorflipper/" target="_blank">Color/Colour Flipper</a>
-              <p class="projectBlurb">This was one of my first projects, without much forethought I started the project and probably took the longest / least efficient way to complete it, but in the end I did learn a lot and that's the main goal.
-                Built
-                with classic JavaScript.</p>
-            </li>
-            <li><span class="hoverMe">Hover Me <span class="hoverArrow">&#8594;</span> </span><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a>
-              <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="projectListBoxRight">
+      <!-- <div class="projectListBoxRight">
         <ul class="projectList">
           <li><a class="projectLink" id="flipProjectModal" href="" target="_blank">Coming Soon</a> <span class="hoverArrow">&#8592;</span> <span class="hoverMe">Hover Me</span>
             <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
@@ -160,7 +297,7 @@
             <p class="projectBlurb">Project currently under construction, new projects added upon completion.</p>
           </li>
         </ul>
-      </div>
+      </div> -->
     </section>
 
     <section id="where">
@@ -201,8 +338,7 @@
             <br><br>I enrolled in a handful of Black Friday Sale courses in late 2019, and with 2020 being the year that it was, it was a great time to study and learn some new skills.<br><br> I
             completed a <a class="altTextColor" href="https://www.linkedin.com/learning/javascript-essential-training-3/welcome" target="_blank">JavaScript course</a> through LinkedInLearning and moved on to a <br><a class="altTextColor"
               href="https://www.udemy.com/course/ultimate-web/" target="_blank">Full Stack Web Dev Course</a> through Udemy and Devslopes.<br><br> My aim is continue learning Front-end, through new and updated technologies while also <span
-              class="altTextColor">learning</span> about back-end development, UI and UX design.
-            developer. <br><br>Each project I start and complete teaches me somethign new, whether it seemed so simple after the fact, or something that has taken me weeks to understand. <span class="altTextColor">My goal is to learn</span>, there's
+              class="altTextColor">learning</span> about back-end development, UI and UX design.<br><br>Each project I start and complete teaches me somethign new, whether it seemed so simple after the fact, or something that has taken me weeks to understand. <span class="altTextColor">My goal is to learn</span>, there's
             always room to learn and improve and that's another thing that attracts me to coding.<br><br><span class="quote">"Think
               outside the div."</span> - Kristof Orts</p>
         </div>
@@ -252,12 +388,13 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="scripts/jquery.scrollify.js"></script>
   <script src="https://seattleowl.com/pointer.js/pointer.js"></script>
-  <!-- <script src="navbar.js"></script> -->
+  <script src="navbar.js"></script>
   <script src="scripts/hamburger.js"></script>
   <script src="scripts/pointer.js"></script>
-  <script src="scripts/reveal.js"></script>
-  <script src="scripts/modal.js"></script>
   <script src="scripts/jquery.reveal.js"></script>
+  <script src="scripts/reveal.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="scripts/modal.js"></script>
 </body>
 
 </html>
