@@ -28,7 +28,6 @@ if (!sessionStorage.isVisited) {
   $(".centerImage").removeClass("fadeIn");
 }
 
-
 $('.navBar a, .nameP a, .contactP a').on('click', function(e) {
   if (this.hash !== '') {
     e.preventDefault();
@@ -42,36 +41,78 @@ $('.navBar a, .nameP a, .contactP a').on('click', function(e) {
   }
 });
 
-// NAV BAR
-if ($(window).width() > 768) {
-$(".topNav li a").click(function() {
-  $(".topNav li a").removeClass("navClicked");
-  $(this).addClass("navClicked");
-  $(this).css("transition", ".5s");
-});
-
-$(".navWhat, .navWhy").click(function() {
-  $("nav ul").fadeOut(100, function() {
-    $("nav ul").removeClass("topNavLeft");
-    $("nav ul").addClass("topNavRight");
-    $("nav ul").fadeIn(1600, function() {});
-  });
-});
-
-$(".navWho, .navWhere, .navHow").click(function() {
-  $("nav ul").fadeOut(100, function() {
+// ON SCROLL, ADD NAVCLICKED ON NAVBAR AND SNAP TO SECTION
+$(document).on('scroll', function() {
+  if ($(this).scrollTop() >= $('#landing').position().top) {
+    $(".navWho, .navWhat, .navWhere, .navWhy, .navHow").removeClass("navClicked");
     $("nav ul").removeClass("topNavRight");
     $("nav ul").addClass("topNavLeft");
-    $("nav ul").fadeIn(1600, function() {});
-  });
+  }
+  if ($(this).scrollTop() >= $('#who').position().top) {
+    $(".navWhat, .navWhere, .navWhy, .navHow").removeClass("navClicked");
+    $(".navWho").addClass("navClicked");
+    $("nav ul").removeClass("topNavRight");
+    $("nav ul").addClass("topNavLeft");
+  }
+  if ($(this).scrollTop() >= $('#what').position().top) {
+    $(".navWho, .navWhere, .navWhy, .navHow").removeClass("navClicked");
+    $(".navWhat").addClass("navClicked");
+    $("nav ul").removeClass("topNavLeft");
+    $("nav ul").addClass("topNavRight");
+  }
+  if ($(this).scrollTop() >= $('#where').position().top) {
+    $(".navWhat, .navWho, .navWhy, .navHow").removeClass("navClicked");
+    $(".navWhere").addClass("navClicked");
+    $("nav ul").removeClass("topNavRight");
+    $("nav ul").addClass("topNavLeft");
+  }
+  if ($(this).scrollTop() >= $('#why').position().top) {
+    $(".navWhat, .navWho, .navWhere, .navHow").removeClass("navClicked");
+    $(".navWhy").addClass("navClicked");
+    $("nav ul").removeClass("topNavLeft");
+    $("nav ul").addClass("topNavRight");
+  }
+  if ($(this).scrollTop() >= $('#how').position().top) {
+    $(".navWhat, .navWho, .navWhere, .navWhy").removeClass("navClicked");
+    $(".navHow").addClass("navClicked");
+    $("nav ul").removeClass("topNavRight");
+    $("nav ul").addClass("topNavLeft");
+  }
 });
+// SECTION SNAPSCROLL TO BE DETERMINED
+$('section').SnapScroll();
+
+
+// NAV BAR
+if ($(window).width() > 768) {
+  $(".topNav li a").click(function() {
+    $(".topNav li a").removeClass("navClicked");
+    $(this).addClass("navClicked");
+    $(this).css("transition", ".5s");
+  });
+
+  $(".navWhat, .navWhy").click(function() {
+    $("nav ul").fadeOut(100, function() {
+      $("nav ul").removeClass("topNavLeft");
+      $("nav ul").addClass("topNavRight");
+      $("nav ul").fadeIn(1600, function() {});
+    });
+  });
+
+  $(".navWho, .navWhere, .navHow").click(function() {
+    $("nav ul").fadeOut(100, function() {
+      $("nav ul").removeClass("topNavRight");
+      $("nav ul").addClass("topNavLeft");
+      $("nav ul").fadeIn(1600, function() {});
+    });
+  });
 }
 
 // RESET NAV BAR WHEN CLICKING HOME
 $(".nameP a").click(function() {
-    $(".topNav li a").removeClass("navClicked");
-    $(".topNav").removeClass("topNavRight");
-    $(".topNav").addClass("topNavLeft");
+  $(".topNav li a").removeClass("navClicked");
+  $(".topNav").removeClass("topNavRight");
+  $(".topNav").addClass("topNavLeft");
 });
 
 
@@ -121,4 +162,12 @@ $("#chk").click(function() {
 //    	 $('a').removeClass('navClicked');
 //    	 $("[href=#"+id+"]").addClass('navClicked');
 //    });
+//    if ($("section[id]").is("#what, #why")) {
+//      $("nav ul").removeClass("topNavLeft");
+//      $("nav ul").addClass("topNavRight");
+//      console.log("here");
+//    } else if ($("section[id]").is("#who, #where, #how")) {
+//      $("nav ul").removeClass("topNavRight");
+//      $("nav ul").addClass("topNavLeft");
+//    };
 // });
