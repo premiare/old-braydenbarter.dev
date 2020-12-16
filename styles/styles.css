@@ -58,6 +58,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 /* ---- IMAGE GLOBALS ---- */
 .whoImage,
 .whatImage,
@@ -660,6 +661,17 @@ hr.sectionLine {
   font-size: 14px;
   font-weight: 600;
   margin: 40px 0 20px 0;
+}
+
+.mobileContactList {
+  list-style: none;
+  display: none;
+  margin: 2rem auto;
+  padding: 0 20%;
+}
+
+.mobileContactList li a {
+  padding: 0 10px;
 }
 
 .contactList {
